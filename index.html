@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Swanson Quote Generator</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<div id="quote"></div>
+		<div class="flex">
+			<div class="flex-img-container">
+				<img class="flex-item" src="assets/RonSitting.png">
+			</div>
+			<div class="flex-btn-container">
+				<button class="flex-item"><a class="getquote">Go on...</a></button>
+				<button class="flex-item"><a class="twitter"><img src="assets/Twitter_logo_initial.png">Tweet</a></button>
+				<button class="flex-item"><a class="facebook"><img src="assets/facebook-2.svg">Share</a></button>
+			</div>
+		</div>
+
+		<script>
+  			window.fbAsyncInit = function() {
+			    FB.init({
+			      appId            : '805976016256027',
+			      autoLogAppEvents : true,
+			      xfbml            : true,
+			      version          : 'v2.12'
+			    });
+			  };
+
+			  (function(d, s, id){
+			     var js, fjs = d.getElementsByTagName(s)[0];
+			     if (d.getElementById(id)) {return;}
+			     js = d.createElement(s); js.id = id;
+			     js.src = "https://connect.facebook.net/en_US/sdk.js";
+			     fjs.parentNode.insertBefore(js, fjs);
+			   }(document, 'script', 'facebook-jssdk'));
+		</script>
+	</body>
+</html>
